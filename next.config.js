@@ -25,6 +25,10 @@ const nextConfig = {
   experimental: {
     serverComponentsExternalPackages: ["@prisma/client"],
   },
+  // Explicitly add middleware runtime as nodejs if required
+  middleware: {
+    runtime: 'nodejs', // Ensures Node.js runtime is used instead of Edge runtime
+  },
 };
 
 module.exports = withContentlayer(nextConfig);
